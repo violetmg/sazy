@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Inventario</title>
+</head>
+<body>
+    <h2>Gestión de Inventario</h2>
+    <form id="inventory-form">
+        <label for="ref">Referencia</label>
+        <select id="ref">
+            <option value="BL07">BL07</option>
+            <option value="BL93">BL93</option>
+            <option value="PL92">PL92</option>
+            <option value="PL83">PL83</option>
+            <!-- Agrega más referencias según sea necesario -->
+        </select>
+
+        <label for="quantity">Cantidad</label>
+        <input type="number" id="quantity" placeholder="Cantidad" required>
+
+        <label for="size">Talla</label>
+        <select id="size">
+            <option value="S">S</option>
+            <option value="M">M</option>
+            <option value="L">L</option>
+            <option value="XL">XL</option>
+            <option value="2XL">2XL</option>
+            <option value="3XL">3XL</option>
+            <option value="4XL">4XL</option>
+        </select>
+
+        <label for="price">Precio</label>
+        <input type="number" id="price" placeholder="Precio" required>
+
+        <button type="button" onclick="addItem()">Agregar al carrito</button>
+    </form>
+
+    <h2>Carrito</h2>
+    <table id="cart">
+        <tr>
+            <th>Referencia</th>
+            <th>Cantidad</th>
+            <th>Talla</th>
+            <th>Precio Unitario</th>
+            <th>Subtotal</th>
+            <th>Acción</th>
+        </tr>
+        <!-- Items dinámicamente agregados aquí -->
+    </table>
+    <h3>Total: $<span id="total">0.00</span></h3>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
